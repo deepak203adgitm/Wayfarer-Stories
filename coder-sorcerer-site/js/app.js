@@ -237,7 +237,7 @@ var App = {
   },
 
   setupPWA: function() {
-    if ('serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(function() {});
+    if ('serviceWorker' in navigator) navigator.serviceWorker.register('./sw.js').catch(function() {});
     var deferredPrompt = null;
     window.addEventListener('beforeinstallprompt', function(e) {
       e.preventDefault(); deferredPrompt = e;
