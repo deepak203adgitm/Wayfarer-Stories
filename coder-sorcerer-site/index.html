@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deepak Sharma | @coder_sorcerer</title>
+  <meta name="description" content="Deepak Sharma — SDE-2 at Ericsson, traveler, coder.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo"><i class="fas fa-hat-wizard"></i> coder_sorcerer</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#stories">Stories</a></li>
+        <li><a href="#reels">Reels</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" title="Toggle theme"><i class="fas fa-moon"></i></button>
+        <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+      <div class="hero-avatar">
+        <img src="https://instagram.fblr2-3.fna.fbcdn.net/v/t51.82787-19/641109595_18108489250772765_4978128029857521643_n.jpg?stp=dst-jpg_s320x320_tt6&_nc_ht=instagram.fblr2-3.fna.fbcdn.net&_nc_cat=105&ccb=7-5&_nc_sid=8b3546" alt="Deepak Sharma" crossorigin="anonymous">
+      </div>
+      <h1 class="glitch">Deepak Sharma</h1>
+      <p class="hero-handle">@coder_sorcerer · @quiet.energy</p>
+      <p class="tagline">SDE-2 at Ericsson · <span class="typewriter" id="typewriter"></span></p>
+      <p class="hero-bio">一期一会 — Ichigo ichie — One time, one meeting</p>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">97</span><span class="stat-label">Posts</span></div>
+        <div class="stat"><span class="stat-num">284</span><span class="stat-label">Followers</span></div>
+        <div class="stat"><span class="stat-num">14</span><span class="stat-label">Highlights</span></div>
+      </div>
+      <div class="hero-cta">
+        <a href="#reels" class="btn btn-primary"><i class="fas fa-play"></i> Watch Reels</a>
+        <a href="#blog" class="btn btn-outline"><i class="fas fa-book-open"></i> Read Blog</a>
+        <a href="https://instagram.com/coder_sorcerer" target="_blank" class="btn btn-instagram"><i class="fab fa-instagram"></i> Follow</a>
+      </div>
+    </div>
+    <div class="scroll-indicator"><i class="fas fa-chevron-down"></i></div>
+  </section>
+
+  <!-- Stories -->
+  <section class="section" id="stories">
+    <div class="container">
+      <h2 class="section-title"><i class="fas fa-circle-notch"></i> Story Highlights</h2>
+      <div class="stories-row" id="storiesRow"></div>
+    </div>
+  </section>
+
+  <!-- Story Viewer Modal -->
+  <div class="story-modal" id="storyModal">
+    <div class="story-modal-content">
+      <div class="story-progress" id="storyProgress"></div>
+      <button class="story-close" id="storyClose"><i class="fas fa-times"></i></button>
+      <div class="story-header" id="storyHeader"></div>
+      <div class="story-media" id="storyMedia"></div>
+      <div class="story-caption" id="storyCaption"></div>
+      <button class="story-nav story-prev" id="storyPrev"><i class="fas fa-chevron-left"></i></button>
+      <button class="story-nav story-next" id="storyNext"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+
+  <!-- Reels -->
+  <section class="section section-alt" id="reels">
+    <div class="container">
+      <h2 class="section-title"><i class="fab fa-instagram"></i> Reels</h2>
+      <p class="section-sub">Latest from my Instagram</p>
+      <div class="reels-scroll" id="reelsScroll"></div>
+    </div>
+  </section>
+
+  <!-- Blog -->
+  <section class="section" id="blog">
+    <div class="container">
+      <h2 class="section-title"><i class="fas fa-pen-fancy"></i> Blog</h2>
+      <div class="filter-bar" id="blogFilters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="tech">Tech</button>
+        <button class="filter-btn" data-filter="travel">Travel</button>
+        <button class="filter-btn" data-filter="life">Life</button>
+      </div>
+      <div class="blog-grid" id="blogGrid"></div>
+    </div>
+  </section>
+
+  <!-- Blog Modal -->
+  <div class="modal" id="blogModal">
+    <div class="modal-content">
+      <button class="modal-close" id="closeBlogModal"><i class="fas fa-times"></i></button>
+      <div id="blogModalBody"></div>
+    </div>
+  </div>
+
+  <!-- About -->
+  <section class="section section-alt" id="about">
+    <div class="container">
+      <h2 class="section-title"><i class="fas fa-user-astronaut"></i> About</h2>
+      <div class="about-grid">
+        <div class="about-card">
+          <div class="about-text">
+            <p>Hey, I'm <strong>Deepak Sharma</strong> — SDE-2 at Ericsson by day, mountain wanderer by heart.</p>
+            <p>I believe in <em>Ichigo ichie (一期一会)</em> — treasuring each unrepeatable moment. That's why I travel, capture, and share.</p>
+            <div class="skills">
+              <span class="skill-tag"><i class="fas fa-mountain"></i> Mountains</span>
+              <span class="skill-tag"><i class="fas fa-code"></i> Coding</span>
+              <span class="skill-tag"><i class="fas fa-camera"></i> Photography</span>
+              <span class="skill-tag"><i class="fas fa-plane"></i> Travel</span>
+            </div>
+          </div>
+        </div>
+        <div class="about-card">
+          <h3><i class="fas fa-link"></i> Connect</h3>
+          <div class="connect-links">
+            <a href="https://instagram.com/coder_sorcerer" target="_blank" class="connect-link"><i class="fab fa-instagram"></i> @coder_sorcerer</a>
+            <a href="https://www.facebook.com/profile.php?id=100094766882458" target="_blank" class="connect-link"><i class="fab fa-facebook"></i> Deepak Sharma</a>
+            <a href="https://github.com/coder-sorcerer" target="_blank" class="connect-link"><i class="fab fa-github"></i> GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Deepak Sharma · @coder_sorcerer · Built with <i class="fas fa-heart"></i></p>
+  </footer>
+
+  <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
