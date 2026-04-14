@@ -19,6 +19,7 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#" onclick="App.switchSection('professional');return false;">Professional</a></li>
         <li><a href="#" onclick="App.switchSection('social');return false;">Social</a></li>
+        <li><a href="#" onclick="App.switchSection('games');return false;">Games</a></li>
         <li><a href="#about">About</a></li>
       </ul>
       <div class="nav-actions">
@@ -37,11 +38,12 @@
       </div>
       <h1 class="glitch">Deepak Sharma</h1>
       <p class="hero-handle">@coder_sorcerer · @quiet.energy</p>
-      <p class="tagline">Software Engineer at Truminds · <span class="typewriter" id="typewriter"></span></p>
+      <p class="tagline"><span data-role>Software Engineer at Ericsson</span> · <span class="typewriter" id="typewriter"></span></p>
       <p class="hero-bio">一期一会 — Ichigo ichie — One time, one meeting</p>
       <div class="hero-cta">
         <a href="#" class="btn btn-primary" onclick="App.switchSection('professional');return false;"><i class="fas fa-briefcase"></i> Professional</a>
         <a href="#" class="btn btn-outline" onclick="App.switchSection('social');return false;"><i class="fas fa-heart"></i> Social</a>
+        <a href="#" class="btn btn-outline" onclick="App.switchSection('games');return false;"><i class="fas fa-gamepad"></i> Games</a>
         <a href="https://instagram.com/coder_sorcerer" target="_blank" class="btn btn-instagram"><i class="fab fa-instagram"></i> Follow</a>
       </div>
     </div>
@@ -56,6 +58,9 @@
     <button class="switch-btn" data-section="social" onclick="App.switchSection('social')">
       <i class="fas fa-heart"></i> Social
     </button>
+    <button class="switch-btn" data-section="games" onclick="App.switchSection('games')">
+      <i class="fas fa-gamepad"></i> Games
+    </button>
   </div>
 
   <!-- ==================== PROFESSIONAL ==================== -->
@@ -66,38 +71,14 @@
       <div class="container">
         <div class="resume-top">
           <h2 class="section-title"><i class="fas fa-file-alt"></i> Resume</h2>
-          <a href="https://drive.google.com/uc?export=download&id=1PKiw8WfX4Ym3PN2cYlYJnhGnMMQe52_4" class="btn-download" target="_blank"><i class="fas fa-download"></i> Download PDF</a>
+          <a href="https://drive.google.com/uc?export=download&id=1PKiw8WfX4Ym3PN2cYlYJnhGnMMQe52_4" class="btn-download" target="_blank" data-resume-pdf><i class="fas fa-download"></i> Download PDF</a>
         </div>
 
-        <div class="resume-summary">
-          <p>Frontend-focused Software Engineer with 3+ years of experience building scalable, high-performance web applications using React and modern JavaScript. Experienced in designing modular UI architectures, developing real-time dashboards, and integrating REST APIs in distributed systems.</p>
-        </div>
+        <div class="resume-summary" id="resumeSummary"><p></p></div>
 
         <div class="resume-block">
           <h3 class="resume-heading"><i class="fas fa-briefcase"></i> Experience</h3>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="timeline-header">
-                  <h4>Software Engineer</h4>
-                  <span class="timeline-date">Aug 2022 — Present</span>
-                </div>
-                <p class="timeline-company"><i class="fas fa-building"></i> Truminds Software Systems · Gurugram, Haryana</p>
-                <ul class="timeline-list">
-                  <li>Architected and led development of a centralized workflow automation platform for lab validation and performance testing using Flask</li>
-                  <li>Designed a scalable workflow engine supporting sequential, parallel, and distributed execution with retry and failure recovery</li>
-                  <li>Built a recurring scheduler for nightly and release-based performance test runs, reducing manual effort by ~60%</li>
-                  <li>Developed RESTful APIs for workflow orchestration, execution tracking, and analytics reporting</li>
-                  <li>Owned full-stack dashboard development (Flask + React) enabling real-time execution monitoring and drill-down analytics</li>
-                  <li>Architected and deployed a load-balanced, multi-VM production environment using Nginx and Gunicorn</li>
-                  <li>Implemented watchdog monitoring to auto-detect failures and restart backend services</li>
-                  <li>Integrated GitLab, Slack, Confluence, and JIRA for CI triggers, notifications, and automated result publishing</li>
-                  <li>Led production issue debugging and performance optimization, reducing downtime significantly</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <div class="timeline" id="experienceTimeline"></div>
         </div>
 
         <div class="resume-block">
@@ -115,8 +96,7 @@
 
         <div class="resume-block">
           <h3 class="resume-heading"><i class="fas fa-tools"></i> Skills</h3>
-          <div class="skills-grid">
-            <div class="skill-group"><h5>Languages</h5><div class="skill-pills"><span>Python</span><span>JavaScript</span><span>C++14</span></div></div>
+          <div class="skills-grid" id="skillsGrid"></div>
             <div class="skill-group"><h5>Backend</h5><div class="skill-pills"><span>Flask</span><span>REST APIs</span><span>Gunicorn</span></div></div>
             <div class="skill-group"><h5>Frontend</h5><div class="skill-pills"><span>React</span><span>HTML5</span><span>CSS3</span><span>Bootstrap</span></div></div>
             <div class="skill-group"><h5>Database</h5><div class="skill-pills"><span>MongoDB</span><span>SQL</span></div></div>
@@ -127,30 +107,11 @@
 
         <div class="resume-block">
           <h3 class="resume-heading"><i class="fas fa-graduation-cap"></i> Education</h3>
-          <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="timeline-header"><h4>B.Tech — Information Technology</h4><span class="timeline-date">Aug 2022</span></div>
-                <p class="timeline-company"><i class="fas fa-university"></i> Guru Gobind Singh Indraprastha University, Delhi</p>
-              </div>
-            </div>
-            <div class="timeline-item">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <div class="timeline-header"><h4>XII — PCM</h4><span class="timeline-date">Jul 2017</span></div>
-                <p class="timeline-company"><i class="fas fa-school"></i> Hindu Vidya Peeth, Sonipat, Haryana</p>
-              </div>
-            </div>
-          </div>
-        </div>
+          <div class="timeline" id="educationTimeline"></div>
 
         <div class="resume-block">
           <h3 class="resume-heading"><i class="fas fa-certificate"></i> Certifications</h3>
-          <div class="cert-list">
-            <div class="cert-item"><i class="fas fa-award"></i> Certificate of Competency — Data Structures & Algorithms</div>
-            <div class="cert-item"><i class="fas fa-award"></i> Certificate of Competency — SQL, Problem Solving, Python</div>
-          </div>
+          <div class="cert-list" id="certList"></div>
         </div>
       </div>
     </section>
@@ -168,6 +129,15 @@
 
   <!-- ==================== SOCIAL ==================== -->
   <div id="socialSection" style="display:none">
+
+    <!-- YouTube -->
+    <section class="section" id="youtube">
+      <div class="container">
+        <h2 class="section-title"><i class="fab fa-youtube"></i> Lost & Living</h2>
+        <p class="section-sub">My YouTube Shorts playlist · <a href="https://youtube.com/playlist?list=PL2b201679MJfyEoLYXvSxzpf3Ocp9z57k" target="_blank" style="color:var(--primary)">View on YouTube</a></p>
+        <div class="reels-scroll" id="ytScroll"></div>
+      </div>
+    </section>
 
     <!-- Reels -->
     <section class="section section-alt" id="reels">
@@ -195,16 +165,51 @@
     <!-- Hobbies -->
     <section class="section section-alt" id="hobbies">
       <div class="container">
-        <h2 class="section-title"><i class="fas fa-gamepad"></i> Hobbies & Interests</h2>
-        <div class="hobby-pills" style="justify-content:center">
-          <span><i class="fas fa-code"></i> Competitive Coding</span>
-          <span><i class="fas fa-puzzle-piece"></i> Sudoku</span>
-          <span><i class="fas fa-film"></i> Movies</span>
-          <span><i class="fas fa-music"></i> Music</span>
-          <span><i class="fas fa-utensils"></i> Cooking</span>
-          <span><i class="fas fa-mountain"></i> Travel</span>
-          <span><i class="fas fa-camera"></i> Photography</span>
-          <span><i class="fas fa-sun"></i> Sunsets</span>
+        <h2 class="section-title"><i class="fas fa-heart"></i> Hobbies & Interests</h2>
+        <div class="hobby-pills" style="justify-content:center" id="hobbyPills"></div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ==================== GAMES ==================== -->
+  <div id="gamesSection" style="display:none">
+
+    <!-- Games -->
+    <section class="section" id="games">
+      <div class="container">
+        <h2 class="section-title"><i class="fas fa-gamepad"></i> Mini Games</h2>
+        <p class="section-sub">Take a break — play something</p>
+        <div class="games-grid">
+
+          <!-- Snake -->
+          <div class="game-card">
+            <div class="game-header"><i class="fas fa-snake"></i><h3>🐍 Snake</h3><span class="game-score" id="snakeScore">Score: 0</span></div>
+            <canvas id="snakeCanvas" width="300" height="300"></canvas>
+            <div class="game-controls">
+              <button onclick="Games.snake.start()"><i class="fas fa-play"></i> Play</button>
+              <div class="mobile-dpad">
+                <button onclick="Games.snake.dir(0,-1)"><i class="fas fa-chevron-up"></i></button>
+                <div><button onclick="Games.snake.dir(-1,0)"><i class="fas fa-chevron-left"></i></button><button onclick="Games.snake.dir(1,0)"><i class="fas fa-chevron-right"></i></button></div>
+                <button onclick="Games.snake.dir(0,1)"><i class="fas fa-chevron-down"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tic Tac Toe -->
+          <div class="game-card">
+            <div class="game-header"><h3>❌⭕ Tic Tac Toe</h3><span class="game-score" id="tttStatus">Your turn (X)</span></div>
+            <div class="ttt-board" id="tttBoard"></div>
+            <div class="game-controls"><button onclick="Games.ttt.reset()"><i class="fas fa-redo"></i> Reset</button></div>
+          </div>
+
+          <!-- Memory -->
+          <div class="game-card">
+            <div class="game-header"><h3>🧠 Memory</h3><span class="game-score" id="memScore">Moves: 0</span></div>
+            <div class="memory-board" id="memBoard"></div>
+            <div class="game-controls"><button onclick="Games.memory.reset()"><i class="fas fa-redo"></i> Reset</button></div>
+          </div>
+
         </div>
       </div>
     </section>
@@ -226,8 +231,8 @@
       <div class="about-grid">
         <div class="about-card">
           <div class="about-text">
-            <p>Hey, I'm <strong>Deepak Sharma</strong> — Software Engineer at Truminds Software Systems, building automation platforms and real-time dashboards.</p>
-            <p>Outside work, I chase mountains, sunsets, and quiet moments. I believe in <em>Ichigo ichie (一期一会)</em> — treasuring each unrepeatable moment.</p>
+            <p id="aboutLine1"></p>
+            <p id="aboutLine2"></p>
             <div class="skills">
               <span class="skill-tag"><i class="fas fa-code"></i> React</span>
               <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
@@ -240,6 +245,7 @@
         <div class="about-card">
           <h3><i class="fas fa-link"></i> Connect</h3>
           <div class="connect-links">
+            <a href="https://www.linkedin.com/in/deepak-sharma-69b376172/" target="_blank" class="connect-link" data-linkedin><i class="fab fa-linkedin"></i> LinkedIn</a>
             <a href="https://instagram.com/coder_sorcerer" target="_blank" class="connect-link"><i class="fab fa-instagram"></i> @coder_sorcerer</a>
             <a href="https://www.facebook.com/profile.php?id=100094766882458" target="_blank" class="connect-link"><i class="fab fa-facebook"></i> Deepak Sharma</a>
             <a href="https://github.com/coder-sorcerer" target="_blank" class="connect-link"><i class="fab fa-github"></i> GitHub</a>
@@ -250,7 +256,7 @@
   </section>
 
   <footer class="footer">
-    <p>&copy; 2025 Deepak Sharma · @coder_sorcerer · Built with <i class="fas fa-heart"></i></p>
+    <p>&copy; 2025 <span data-name>Deepak Sharma</span> · @coder_sorcerer · <a href="https://www.linkedin.com/in/deepak-sharma-69b376172/" target="_blank" style="color:var(--primary);text-decoration:none" data-linkedin><i class="fab fa-linkedin"></i> LinkedIn</a> · Built with <i class="fas fa-heart"></i></p>
   </footer>
 
   <button class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></button>
@@ -268,6 +274,8 @@
   <!-- PWA Install -->
   <button class="pwa-install" id="pwaInstall"><i class="fas fa-download"></i> Install App</button>
 
+  <script src="js/config.js"></script>
   <script src="js/app.js"></script>
+  <script src="js/games.js"></script>
 </body>
 </html>

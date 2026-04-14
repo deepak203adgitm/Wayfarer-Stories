@@ -256,6 +256,38 @@ body{font-family:var(--font);background:var(--bg);color:var(--text);line-height:
 .pwa-install.show{display:flex}
 .pwa-install:hover{transform:translateY(-2px)}
 
+/* Games */
+.games-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:24px}
+.game-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:24px;text-align:center;transition:all var(--transition)}
+.game-card:hover{border-color:var(--primary);box-shadow:var(--shadow)}
+.game-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:8px}
+.game-header h3{font-size:1.1rem;margin:0}
+.game-score{font-size:.8rem;color:var(--accent);font-weight:600;background:var(--primary-glow);padding:4px 12px;border-radius:12px}
+.game-controls{display:flex;justify-content:center;gap:8px;margin-top:16px;flex-wrap:wrap}
+.game-controls button{padding:8px 20px;border:1px solid var(--border);background:var(--bg3);color:var(--text);border-radius:8px;cursor:pointer;font-size:.85rem;font-weight:600;transition:all var(--transition);display:flex;align-items:center;gap:6px}
+.game-controls button:hover{border-color:var(--primary);color:var(--primary)}
+.mobile-dpad{display:flex;flex-direction:column;align-items:center;gap:2px}
+.mobile-dpad div{display:flex;gap:2px}
+.mobile-dpad button{padding:8px 14px;min-width:auto}
+
+/* Snake */
+#snakeCanvas{background:var(--bg3);border-radius:8px;display:block;margin:0 auto;max-width:100%;border:1px solid var(--border)}
+
+/* Tic Tac Toe */
+.ttt-board{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;max-width:240px;margin:0 auto}
+.ttt-cell{aspect-ratio:1;background:var(--bg3);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:800;cursor:pointer;transition:all var(--transition);color:var(--text)}
+.ttt-cell:hover{border-color:var(--primary);background:var(--primary-glow)}
+.ttt-cell.x{color:#e74c3c}
+.ttt-cell.o{color:var(--primary)}
+.ttt-cell.win{background:var(--primary-glow);border-color:var(--primary);animation:pulse .5s}
+
+/* Memory */
+.memory-board{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:300px;margin:0 auto}
+.mem-card{aspect-ratio:1;background:var(--gradient);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;cursor:pointer;transition:all .3s;border:2px solid transparent;user-select:none}
+.mem-card.flipped,.mem-card.matched{background:var(--bg3);border-color:var(--primary)}
+.mem-card.matched{opacity:.6;cursor:default}
+.mem-card:not(.flipped):not(.matched):hover{transform:scale(1.05);border-color:var(--accent)}
+
 @media(max-width:768px){
   .hamburger{display:flex!important}
   .nav-links{position:fixed;top:64px;left:0;right:0;background:var(--bg2);flex-direction:column;padding:16px;border-bottom:1px solid var(--border);display:none;gap:4px}
