@@ -1,8 +1,9 @@
-const App = {
-  storyIndex: 0,
-  _storyTimer: null,
+const IG_USERNAME = 'coder_sorcerer';
+const IG_APP_ID = '936619743392459';
 
-  // Your real Instagram post shortcodes
+const App = {
+  profilePic: '',
+
   reels: [
     { code: 'DXEtOjBD1PM', date: 'Jun 11, 2026' },
     { code: 'DXEPVewDxNZ', date: 'Jun 11, 2026' },
@@ -16,20 +17,6 @@ const App = {
     { code: 'DB82uDiyWhC', date: 'Nov 4, 2024' }
   ],
 
-  stories: [
-    { label: 'Mountains', img: 'https://www.instagram.com/p/DV-7OvjjEGl/media/?size=m', caption: 'Lost in the mountains ⛰️' },
-    { label: 'Sunsets', img: 'https://www.instagram.com/p/DWItCkxD8Ww/media/?size=m', caption: 'Not every day is perfect, but every sunset is 🔥' },
-    { label: 'Night Vibes', img: 'https://www.instagram.com/p/DWHTcMwD-s_/media/?size=m', caption: 'The night hums quietly' },
-    { label: 'Hill Station', img: 'https://www.instagram.com/p/DV5lTTLDwJ9/media/?size=m', caption: 'Hill station escape 🏔️' },
-    { label: 'Nature', img: 'https://www.instagram.com/p/DB82uDiyWhC/media/?size=m', caption: 'Nature doesn\'t need a filter' },
-    { label: 'Wanderlust', img: 'https://www.instagram.com/p/DWjdCV6D55J/media/?size=m', caption: 'The road is calling' },
-    { label: 'Vibes', img: 'https://www.instagram.com/p/DWTkTeOD_HO/media/?size=m', caption: 'Calm energy ✨' },
-    { label: 'Explore', img: 'https://www.instagram.com/p/DXEtOjBD1PM/media/?size=m', caption: 'New places, new stories' },
-    { label: 'Moments', img: 'https://www.instagram.com/p/DWMRx7AD7dv/media/?size=m', caption: 'Ichigo ichie — one time, one meeting' },
-    { label: 'Peace', img: 'https://www.instagram.com/p/DXEPVewDxNZ/media/?size=m', caption: 'Finding peace in the chaos' }
-  ],
-
-  // Hardcoded blogs
   blogs: [
     {
       id: 1, cat: 'tech', icon: 'fa-code-branch',
@@ -149,18 +136,12 @@ git diff HEAD~5</pre>
       title: 'Why Mountains Reset My Brain',
       preview: 'Every time I feel stuck — in code or in life — I head to the hills. Here\'s why it works every single time.',
       content: `<p>There's something about the mountains that resets everything.</p>
-
 <p>As an SDE-2 at Ericsson, my weeks are filled with screens, standups, and sprint reviews. The mountains don't care about any of that. They just exist — massive, silent, humbling.</p>
-
 <p>I woke up early that morning. The kind of early where the sky hasn't decided what color it wants to be. The air was sharp and cold — the kind that makes you feel alive in a way no amount of coffee can.</p>
-
 <p>The trail was quiet. Just me, my thoughts, and footsteps on gravel. Every turn revealed something new — a valley draped in mist, a stream cutting through rocks, wildflowers growing where they had no business growing.</p>
-
 <p>I've noticed a pattern: every time I come back from the mountains, the code problems that seemed impossible suddenly have obvious solutions. It's like my brain needed the space to rearrange itself.</p>
-
 <p>Ichigo ichie — one time, one meeting. I could come back to the same spot a hundred times and never see this exact light, this exact cloud, this exact feeling.</p>
-
-<p>If you're a developer reading this and you're feeling stuck — take the trip. The code will wait. The mountains won't always look like this.</p>`,
+<p>If you're feeling stuck — take the trip. The code will wait. The mountains won't always look like this.</p>`,
       date: 'May 10, 2025'
     },
     {
@@ -168,17 +149,10 @@ git diff HEAD~5</pre>
       title: 'Chasing Sunsets — Not Every Day Is Perfect',
       preview: 'Not every day is perfect, but every sunset is. A short story about slowing down and looking up.',
       content: `<p>Not every day is perfect, but every sunset is.</p>
-
 <p>I've been chasing sunsets for as long as I can remember. There's a moment right before the sun dips below the horizon where everything turns golden. The sky looks like someone spilled watercolors — orange bleeding into pink, pink fading into purple.</p>
-
 <p>This particular evening was one of those rare ones where everything aligned. The clouds were just right, the light was warm, and I had nowhere to be.</p>
-
-<p>As someone who spends most days debugging code and reviewing PRs, these moments of stillness feel almost rebellious. No notifications. No Slack messages. No JIRA tickets. Just the sky doing its thing.</p>
-
 <p>I stood there for maybe twenty minutes, watching the colors shift. Each second was different from the last. That's the thing about sunsets — they're the ultimate reminder that nothing stays the same, and that's okay.</p>
-
 <p>I filmed a short reel because I wanted to remember this. But honestly, the camera never captures the warmth on your skin or the way the world goes quiet for just a moment.</p>
-
 <p>Keep moving. Keep looking up. The best sunsets are the ones you almost missed.</p>`,
       date: 'Apr 28, 2025'
     },
@@ -187,15 +161,10 @@ git diff HEAD~5</pre>
       title: 'Late Night Walks and Quiet Energy',
       preview: 'The night hums quietly when you stop to listen. On finding calm in the chaos of city life.',
       content: `<p>The night hums quietly when you stop to listen.</p>
-
 <p>There's a different energy to cities after dark. The rush hour chaos fades, the streets empty out, and what's left is this gentle hum — distant traffic, flickering lights, occasional laughter from a late-night chai stall.</p>
-
 <p>I'd been coding all day, stuck on a problem that refused to be solved. So I did what I always do when my brain needs a reset — I walked.</p>
-
 <p>The city lights reflected off wet roads. It had rained earlier, creating this mirror effect that made everything look cinematic. Sometimes the most beautiful frames aren't in the mountains — they're right outside your apartment.</p>
-
-<p>There's a calm energy to these hours. The world feels like it's on pause, and you're one of the few people who noticed. It's the same feeling I get when I finally crack a tough bug at 2 AM — quiet satisfaction.</p>
-
+<p>There's a calm energy to these hours. The world feels like it's on pause, and you're one of the few people who noticed.</p>
 <p>I think we underestimate the beauty of ordinary nights. Not every moment needs to be an adventure. Sometimes a quiet walk under city lights is exactly the story worth telling.</p>`,
       date: 'Apr 20, 2025'
     },
@@ -204,19 +173,11 @@ git diff HEAD~5</pre>
       title: 'Ichigo Ichie — The Philosophy I Live By',
       preview: '一期一会 — One time, one meeting. How a Japanese concept changed the way I see every single day.',
       content: `<p>一期一会 — Ichigo ichie.</p>
-
 <p>It roughly translates to "one time, one meeting." The idea that every encounter, every moment, is a once-in-a-lifetime experience. Even if you meet the same person tomorrow, it won't be the same meeting.</p>
-
 <p>I first came across this concept a couple of years ago and it hit different. As a developer, I'm trained to think in loops — repeatable processes, automated tests, CI/CD pipelines. Everything is designed to be reproducible.</p>
-
 <p>But life isn't code. You can't git checkout yesterday. You can't rerun last Tuesday's sunset. That conversation with a stranger at a mountain chai stall? That exact version of it is gone forever.</p>
-
 <p>Since adopting this mindset, I've noticed I'm more present. I put my phone down more often. I actually taste my food instead of eating while scrolling. I look at people when they talk instead of thinking about my next reply.</p>
-
-<p>It's not about being philosophical or deep. It's practical. When you realize this exact moment will never happen again, you naturally pay more attention to it.</p>
-
 <p>That's why I travel. That's why I capture reels. Not for likes — but because each moment deserves to be acknowledged before it passes.</p>
-
 <p>一期一会. This moment, right now, reading this — it's the only time it'll happen exactly like this.</p>`,
       date: 'Apr 10, 2025'
     },
@@ -258,19 +219,11 @@ git diff HEAD~5</pre>
       title: 'Unplanned Trips Are the Best Trips',
       preview: 'A long weekend, a full tank, zero itinerary. How the road decided the destination.',
       content: `<p>The best trips are the ones where the road decides the destination.</p>
-
 <p>I had a long weekend, a full tank, and zero itinerary. That's it. No hotel bookings, no Google Maps route planned, no "top 10 places to visit" list.</p>
-
 <p>I drove through winding roads where every turn felt like unwrapping a gift. Valleys appeared out of nowhere, waterfalls showed up uninvited, and the sky kept changing its mood like an indecisive designer.</p>
-
 <p>I stopped at a small village where an old man was selling fresh fruit. We couldn't speak the same language, but he smiled, I smiled, and that was enough. Ichigo ichie.</p>
-
-<p>As a software engineer, I spend my weekdays in structured environments — sprints, standups, retrospectives. Everything is planned, estimated, and tracked. Travel is my antidote to all that structure.</p>
-
 <p>Found a random homestay run by a family who cooked the best dal chawal I've ever had. No Zomato rating, no Instagram page. Just good food and genuine warmth.</p>
-
 <p>The reel I posted captures maybe 30 seconds of a 3-day trip. But those 30 seconds hold the essence — the wind, the road, the freedom.</p>
-
 <p>If you're waiting for the perfect time to travel, stop waiting. The perfect time is the next long weekend.</p>`,
       date: 'Mar 15, 2025'
     },
@@ -279,105 +232,49 @@ git diff HEAD~5</pre>
       title: 'Burnout Is Real — How I Deal With It',
       preview: 'I burned out twice in my career. Here\'s what I learned and what actually helps me recover.',
       content: `<p>I burned out twice. Both times I didn't see it coming until I was already deep in it.</p>
-
 <p>The first time was early in my career. Working late every night, saying yes to everything, thinking that's what "growth" looks like. One day I just couldn't open my laptop. Not wouldn't — couldn't.</p>
-
 <p>The second time was subtler. I was performing fine at work but felt nothing. No excitement about new features, no satisfaction from shipping. Just going through the motions.</p>
 
 <h2>What Actually Helps</h2>
-
 <p><strong>Travel.</strong> Not a vacation where you're still checking Slack. A real disconnect. Mountains, no signal, no laptop. Even 3 days makes a difference.</p>
-
 <p><strong>Saying no.</strong> This was the hardest one. But every yes to something unimportant is a no to something that matters — including your own rest.</p>
-
 <p><strong>Moving your body.</strong> I don't mean gym motivation culture. Just walk. A 30-minute walk after work changes everything.</p>
-
 <p><strong>Boring hobbies.</strong> I started cooking. Not Instagram-worthy cooking. Just simple dal and rice. The act of making something with your hands that isn't code is therapeutic.</p>
-
 <p><strong>Talking about it.</strong> Not posting about it. Actually talking to someone. A friend, a mentor, anyone who'll listen without trying to fix you.</p>
-
 <p>Burnout isn't a badge of honor. It's a signal that something needs to change. Listen to it.</p>`,
       date: 'Mar 1, 2025'
     }
   ],
 
-  init() {
+  async init() {
     this.setupTheme();
     this.setupNav();
     this.setupParticles();
     this.setupTypewriter();
     this.setupBackToTop();
-    this.renderStories();
+    await this.fetchProfilePic();
     this.renderReels();
     this.renderBlogs();
     this.setupFilters();
-    this.setupStoryViewer();
   },
 
-  // === STORIES ===
-  renderStories() {
-    const row = document.getElementById('storiesRow');
-    row.innerHTML = this.stories.map((s, i) => `
-      <div class="story-item" onclick="App.openStory(${i})">
-        <div class="story-ring">
-          <div class="story-img" style="background-image:url('${s.img}')"></div>
-        </div>
-        <span>${s.label}</span>
-      </div>
-    `).join('');
+  async fetchProfilePic() {
+    try {
+      const res = await fetch(
+        `https://www.instagram.com/api/v1/users/web_profile_info/?username=${IG_USERNAME}`,
+        { headers: { 'X-IG-App-ID': IG_APP_ID } }
+      );
+      const data = await res.json();
+      if (!data.data) return;
+      const pic = data.data.user.profile_pic_url_hd;
+      if (pic) document.querySelector('.hero-avatar img').src = pic;
+    } catch (e) {
+      // fallback avatar already in HTML
+    }
   },
 
-  setupStoryViewer() {
-    document.getElementById('storyClose').onclick = () => this.closeStory();
-    document.getElementById('storyPrev').onclick = () => this.navStory(-1);
-    document.getElementById('storyNext').onclick = () => this.navStory(1);
-    document.addEventListener('keydown', e => {
-      if (!document.getElementById('storyModal').classList.contains('active')) return;
-      if (e.key === 'Escape') this.closeStory();
-      if (e.key === 'ArrowLeft') this.navStory(-1);
-      if (e.key === 'ArrowRight') this.navStory(1);
-    });
-  },
-
-  openStory(i) {
-    this.storyIndex = i;
-    document.getElementById('storyModal').classList.add('active');
-    this.showStory();
-  },
-
-  showStory() {
-    const s = this.stories[this.storyIndex];
-    if (!s) return this.closeStory();
-    document.getElementById('storyMedia').innerHTML = `<img src="${s.img}" alt="${s.label}">`;
-    document.getElementById('storyCaption').textContent = s.caption;
-    document.getElementById('storyHeader').innerHTML = `
-      <img src="https://instagram.fblr2-3.fna.fbcdn.net/v/t51.82787-19/641109595_18108489250772765_4978128029857521643_n.jpg?stp=dst-jpg_s320x320_tt6&_nc_ht=instagram.fblr2-3.fna.fbcdn.net&_nc_cat=105&ccb=7-5&_nc_sid=8b3546" alt="dp">
-      coder_sorcerer
-    `;
-    document.getElementById('storyProgress').innerHTML = this.stories.map((_, i) =>
-      `<div class="story-progress-bar ${i < this.storyIndex ? 'done' : ''} ${i === this.storyIndex ? 'active' : ''}"><div class="fill"></div></div>`
-    ).join('');
-    clearTimeout(this._storyTimer);
-    this._storyTimer = setTimeout(() => this.navStory(1), 5000);
-  },
-
-  navStory(dir) {
-    clearTimeout(this._storyTimer);
-    this.storyIndex += dir;
-    if (this.storyIndex < 0) this.storyIndex = 0;
-    if (this.storyIndex >= this.stories.length) return this.closeStory();
-    this.showStory();
-  },
-
-  closeStory() {
-    clearTimeout(this._storyTimer);
-    document.getElementById('storyModal').classList.remove('active');
-  },
-
-  // === REELS ===
   renderReels() {
-    const scroll = document.getElementById('reelsScroll');
-    scroll.innerHTML = this.reels.map(r => `
+    document.getElementById('reelsScroll').innerHTML = this.reels.map(r => `
       <div class="reel-embed-card">
         <iframe src="https://www.instagram.com/p/${r.code}/embed" loading="lazy" allowtransparency="true" allowfullscreen="true" scrolling="no"></iframe>
         <div class="reel-card-footer">
@@ -388,12 +285,10 @@ git diff HEAD~5</pre>
     `).join('');
   },
 
-  // === BLOGS ===
   renderBlogs(filter) {
     filter = filter || 'all';
-    const grid = document.getElementById('blogGrid');
     const filtered = filter === 'all' ? this.blogs : this.blogs.filter(b => b.cat === filter);
-    grid.innerHTML = filtered.map((b, i) => `
+    document.getElementById('blogGrid').innerHTML = filtered.map((b, i) => `
       <div class="blog-card" style="animation-delay:${i * 0.06}s" onclick="App.openBlog(${b.id})">
         <div class="blog-icon-cover ${b.cat}"><i class="fas ${b.icon}"></i></div>
         <div class="blog-body">
@@ -414,7 +309,6 @@ git diff HEAD~5</pre>
   openBlog(id) {
     const b = this.blogs.find(x => x.id === id);
     if (!b) return;
-    const modal = document.getElementById('blogModal');
     document.getElementById('blogModalBody').innerHTML = `
       <h1>${b.title}</h1>
       <div class="blog-modal-meta">
@@ -423,6 +317,7 @@ git diff HEAD~5</pre>
       </div>
       <div class="blog-modal-body">${b.content}</div>
     `;
+    const modal = document.getElementById('blogModal');
     modal.classList.add('active');
     document.getElementById('closeBlogModal').onclick = () => modal.classList.remove('active');
     modal.onclick = e => { if (e.target === modal) modal.classList.remove('active'); };
@@ -438,7 +333,6 @@ git diff HEAD~5</pre>
     });
   },
 
-  // === UI ===
   setupTheme() {
     const saved = localStorage.getItem('cs_theme') || 'dark';
     document.documentElement.setAttribute('data-theme', saved);
@@ -459,7 +353,7 @@ git diff HEAD~5</pre>
     navLinks.querySelectorAll('a').forEach(a => a.onclick = () => navLinks.classList.remove('open'));
     window.addEventListener('scroll', () => {
       document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
-      for (const id of ['about', 'blog', 'reels', 'stories', 'home']) {
+      for (const id of ['about', 'resume', 'blog', 'reels', 'home']) {
         const el = document.getElementById(id);
         if (el && window.scrollY >= el.offsetTop - 100) {
           navLinks.querySelectorAll('a').forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${id}`));

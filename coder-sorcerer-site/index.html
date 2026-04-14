@@ -15,9 +15,9 @@
       <a href="#" class="logo"><i class="fas fa-hat-wizard"></i> coder_sorcerer</a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
-        <li><a href="#stories">Stories</a></li>
         <li><a href="#reels">Reels</a></li>
         <li><a href="#blog">Blog</a></li>
+        <li><a href="#resume">Resume</a></li>
         <li><a href="#about">About</a></li>
       </ul>
       <div class="nav-actions">
@@ -32,17 +32,13 @@
     <div class="hero-particles" id="particles"></div>
     <div class="hero-content">
       <div class="hero-avatar">
-        <img src="https://instagram.fblr2-3.fna.fbcdn.net/v/t51.82787-19/641109595_18108489250772765_4978128029857521643_n.jpg?stp=dst-jpg_s320x320_tt6&_nc_ht=instagram.fblr2-3.fna.fbcdn.net&_nc_cat=105&ccb=7-5&_nc_sid=8b3546" alt="Deepak Sharma" crossorigin="anonymous">
+        <img src="https://ui-avatars.com/api/?name=Deepak+Sharma&size=280&background=6c5ce7&color=fff&bold=true&font-size=0.35" alt="Deepak Sharma" id="heroAvatar">
       </div>
       <h1 class="glitch">Deepak Sharma</h1>
       <p class="hero-handle">@coder_sorcerer · @quiet.energy</p>
-      <p class="tagline">SDE-2 at Ericsson · <span class="typewriter" id="typewriter"></span></p>
+      <p class="tagline">Software Engineer at Truminds · <span class="typewriter" id="typewriter"></span></p>
       <p class="hero-bio">一期一会 — Ichigo ichie — One time, one meeting</p>
-      <div class="hero-stats">
-        <div class="stat"><span class="stat-num">97</span><span class="stat-label">Posts</span></div>
-        <div class="stat"><span class="stat-num">284</span><span class="stat-label">Followers</span></div>
-        <div class="stat"><span class="stat-num">14</span><span class="stat-label">Highlights</span></div>
-      </div>
+
       <div class="hero-cta">
         <a href="#reels" class="btn btn-primary"><i class="fas fa-play"></i> Watch Reels</a>
         <a href="#blog" class="btn btn-outline"><i class="fas fa-book-open"></i> Read Blog</a>
@@ -51,27 +47,6 @@
     </div>
     <div class="scroll-indicator"><i class="fas fa-chevron-down"></i></div>
   </section>
-
-  <!-- Stories -->
-  <section class="section" id="stories">
-    <div class="container">
-      <h2 class="section-title"><i class="fas fa-circle-notch"></i> Story Highlights</h2>
-      <div class="stories-row" id="storiesRow"></div>
-    </div>
-  </section>
-
-  <!-- Story Viewer Modal -->
-  <div class="story-modal" id="storyModal">
-    <div class="story-modal-content">
-      <div class="story-progress" id="storyProgress"></div>
-      <button class="story-close" id="storyClose"><i class="fas fa-times"></i></button>
-      <div class="story-header" id="storyHeader"></div>
-      <div class="story-media" id="storyMedia"></div>
-      <div class="story-caption" id="storyCaption"></div>
-      <button class="story-nav story-prev" id="storyPrev"><i class="fas fa-chevron-left"></i></button>
-      <button class="story-nav story-next" id="storyNext"><i class="fas fa-chevron-right"></i></button>
-    </div>
-  </div>
 
   <!-- Reels -->
   <section class="section section-alt" id="reels">
@@ -104,18 +79,168 @@
     </div>
   </div>
 
+  <!-- Resume -->
+  <section class="section section-alt" id="resume">
+    <div class="container">
+      <div class="resume-top">
+        <h2 class="section-title"><i class="fas fa-file-alt"></i> Resume</h2>
+        <a href="https://drive.google.com/uc?export=download&id=1PKiw8WfX4Ym3PN2cYlYJnhGnMMQe52_4" class="btn-download" target="_blank"><i class="fas fa-download"></i> Download PDF</a>
+      </div>
+
+      <!-- Summary -->
+      <div class="resume-summary">
+        <p>Frontend-focused Software Engineer with 3+ years of experience building scalable, high-performance web applications using React and modern JavaScript. Experienced in designing modular UI architectures, developing real-time dashboards, and integrating REST APIs in distributed systems.</p>
+      </div>
+
+      <!-- Experience -->
+      <div class="resume-block">
+        <h3 class="resume-heading"><i class="fas fa-briefcase"></i> Experience</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>Software Engineer</h4>
+                <span class="timeline-date">Aug 2022 — Present</span>
+              </div>
+              <p class="timeline-company"><i class="fas fa-building"></i> Truminds Software Systems · Gurugram, Haryana</p>
+              <ul class="timeline-list">
+                <li>Architected and led development of a centralized workflow automation platform for lab validation and performance testing using Flask</li>
+                <li>Designed a scalable workflow engine supporting sequential, parallel, and distributed execution with retry and failure recovery</li>
+                <li>Built a recurring scheduler for nightly and release-based performance test runs, reducing manual effort by ~60%</li>
+                <li>Developed RESTful APIs for workflow orchestration, execution tracking, and analytics reporting</li>
+                <li>Owned full-stack dashboard development (Flask + React) enabling real-time execution monitoring and drill-down analytics</li>
+                <li>Architected and deployed a load-balanced, multi-VM production environment using Nginx and Gunicorn</li>
+                <li>Implemented watchdog monitoring to auto-detect failures and restart backend services</li>
+                <li>Integrated GitLab, Slack, Confluence, and JIRA for CI triggers, notifications, and automated result publishing</li>
+                <li>Led production issue debugging and performance optimization, reducing downtime significantly</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project -->
+      <div class="resume-block">
+        <h3 class="resume-heading"><i class="fas fa-rocket"></i> Project Highlight</h3>
+        <div class="project-card">
+          <h4>Test Launcher Automation Platform (TLA)</h4>
+          <ul class="timeline-list">
+            <li>Designed and deployed an enterprise automation platform for distributed lab validation and performance testing</li>
+            <li>Enabled automated recurring executions, centralized monitoring, and reporting across multiple environments</li>
+            <li>Integrated external systems for CI/CD triggers, collaboration, and analytics visibility</li>
+            <li>Improved execution transparency, reduced operational overhead, and enhanced reliability</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Skills -->
+      <div class="resume-block">
+        <h3 class="resume-heading"><i class="fas fa-tools"></i> Skills</h3>
+        <div class="skills-grid">
+          <div class="skill-group">
+            <h5>Languages</h5>
+            <div class="skill-pills">
+              <span>Python</span><span>JavaScript</span><span>C++14</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h5>Backend</h5>
+            <div class="skill-pills">
+              <span>Flask</span><span>REST APIs</span><span>Gunicorn</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h5>Frontend</h5>
+            <div class="skill-pills">
+              <span>React</span><span>HTML5</span><span>CSS3</span><span>Bootstrap</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h5>Database</h5>
+            <div class="skill-pills">
+              <span>MongoDB</span><span>SQL</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h5>DevOps & Tools</h5>
+            <div class="skill-pills">
+              <span>GitLab</span><span>GitHub</span><span>Nginx</span><span>Linux</span><span>Slack API</span><span>Confluence API</span>
+            </div>
+          </div>
+          <div class="skill-group">
+            <h5>Core</h5>
+            <div class="skill-pills">
+              <span>DSA</span><span>OOP</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="resume-block">
+        <h3 class="resume-heading"><i class="fas fa-graduation-cap"></i> Education</h3>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>B.Tech — Information Technology</h4>
+                <span class="timeline-date">Aug 2022</span>
+              </div>
+              <p class="timeline-company"><i class="fas fa-university"></i> Guru Gobind Singh Indraprastha University, Delhi</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h4>XII — PCM</h4>
+                <span class="timeline-date">Jul 2017</span>
+              </div>
+              <p class="timeline-company"><i class="fas fa-school"></i> Hindu Vidya Peeth, Sonipat, Haryana</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certifications -->
+      <div class="resume-block">
+        <h3 class="resume-heading"><i class="fas fa-certificate"></i> Certifications</h3>
+        <div class="cert-list">
+          <div class="cert-item"><i class="fas fa-award"></i> Certificate of Competency — Data Structures & Algorithms</div>
+          <div class="cert-item"><i class="fas fa-award"></i> Certificate of Competency — SQL, Problem Solving, Python</div>
+        </div>
+      </div>
+
+      <!-- Hobbies -->
+      <div class="resume-block">
+        <h3 class="resume-heading"><i class="fas fa-heart"></i> Hobbies</h3>
+        <div class="hobby-pills">
+          <span><i class="fas fa-code"></i> Competitive Coding</span>
+          <span><i class="fas fa-puzzle-piece"></i> Sudoku</span>
+          <span><i class="fas fa-film"></i> Movies</span>
+          <span><i class="fas fa-music"></i> Music</span>
+          <span><i class="fas fa-utensils"></i> Cooking</span>
+          <span><i class="fas fa-mountain"></i> Travel</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- About -->
-  <section class="section section-alt" id="about">
+  <section class="section" id="about">
     <div class="container">
       <h2 class="section-title"><i class="fas fa-user-astronaut"></i> About</h2>
       <div class="about-grid">
         <div class="about-card">
           <div class="about-text">
-            <p>Hey, I'm <strong>Deepak Sharma</strong> — SDE-2 at Ericsson by day, mountain wanderer by heart.</p>
-            <p>I believe in <em>Ichigo ichie (一期一会)</em> — treasuring each unrepeatable moment. That's why I travel, capture, and share.</p>
+            <p>Hey, I'm <strong>Deepak Sharma</strong> — Software Engineer at Truminds Software Systems, building automation platforms and real-time dashboards.</p>
+            <p>Outside work, I chase mountains, sunsets, and quiet moments. I believe in <em>Ichigo ichie (一期一会)</em> — treasuring each unrepeatable moment.</p>
             <div class="skills">
+              <span class="skill-tag"><i class="fas fa-code"></i> React</span>
+              <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
               <span class="skill-tag"><i class="fas fa-mountain"></i> Mountains</span>
-              <span class="skill-tag"><i class="fas fa-code"></i> Coding</span>
               <span class="skill-tag"><i class="fas fa-camera"></i> Photography</span>
               <span class="skill-tag"><i class="fas fa-plane"></i> Travel</span>
             </div>
